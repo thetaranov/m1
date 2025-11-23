@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist',
       sourcemap: false, // отключаем sourcemaps для уменьшения размера
-      chunkSizeWarningLimit: 1000, // увеличиваем лимит предупреждений
+      chunkSizeWarningLimit: 1500, // увеличиваем лимит предупреждений
       rollupOptions: {
         output: {
           // Разделяем код на чанки для оптимизации загрузки
