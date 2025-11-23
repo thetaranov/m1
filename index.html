@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bbqp | Печь и Мангал</title>
+    <!-- Preload Hero Image for instant LCP - Critical Resource -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&q=80&w=1920">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                black: '#000000',
+                white: '#ffffff',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              scientific: ['"Times New Roman"', 'Georgia', 'serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-in-out',
+              'slide-up': 'slideUp 1s ease-out',
+              'slide-up-fade': 'slideUpFade 0.5s ease-out forwards',
+              'slide-down-fade': 'slideDownFade 0.5s ease-out forwards',
+              'bounce-slow': 'bounce 2s infinite',
+              'shimmer': 'shimmer 5s infinite',
+              'pulse-orange': 'pulseOrange 3s infinite',
+              'scan': 'scan 3s linear infinite',
+              'marquee': 'marquee 25s linear infinite',
+              'marquee-reverse': 'marqueeReverse 25s linear infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(40px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideUpFade: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideDownFade: {
+                '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              pulseOrange: {
+                '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' },
+                '50%': { borderColor: 'rgba(234, 88, 12, 0.6)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-150%) skewX(-12deg)' },
+                '20%': { transform: 'translateX(150%) skewX(-12deg)' },
+                '100%': { transform: 'translateX(150%) skewX(-12deg)' } 
+              },
+              scan: {
+                '0%': { top: '-10%', opacity: '0' },
+                '10%': { opacity: '1' },
+                '90%': { opacity: '1' },
+                '100%': { top: '110%', opacity: '0' }
+              },
+              rise: {
+                '0%': { transform: 'translateY(0) scale(1)', opacity: '0' },
+                '10%': { opacity: '1' },
+                '100%': { transform: 'translateY(-60vh) scale(0)', opacity: '0' }
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' }
+              },
+              marqueeReverse: {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        background-color: #000000;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #ffffff;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .snap-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .snap-section {
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
